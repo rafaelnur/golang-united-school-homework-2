@@ -1,4 +1,4 @@
-package square
+package solution
 
 import (
 	"math"
@@ -20,11 +20,11 @@ func CalcSquare(sideLen float64, sidesNum CustomInt) float64 {
 	var res float64
 	switch {
 	case sidesNum == 0:
-		res = sideLen * sideLen * Pi
+		res = math.Pow(2, sideLen) * Pi
 	case sidesNum == 4:
-		res = sideLen * sideLen
+		res = math.Pow(2, sideLen)
 	case sidesNum == 3:
-		res = sideLen * sideLen * math.Sqrt(3) / 4
+		res = math.Pow(2, sideLen) * math.Sqrt(3) / 4
 	default:
 		return 0
 	}
