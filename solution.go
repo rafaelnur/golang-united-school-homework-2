@@ -5,7 +5,6 @@ import (
 )
 
 const (
-	Pi                      = 3.14
 	SidesTriangle CustomInt = 3
 	SidesCircle   CustomInt = 0
 	SidesSquare   CustomInt = 4
@@ -25,7 +24,7 @@ func CalcSquare(sideLen float64, sidesNum CustomInt) float64 {
 	var res float64
 	switch {
 	case sidesNum == SidesCircle:
-		res = math.Pow(sideLen, 2) * Pi
+		res = math.Pow(sideLen, 2) * math.Pi
 	case sidesNum == SidesSquare:
 		res = math.Pow(sideLen, 2)
 	case sidesNum == SidesTriangle:
