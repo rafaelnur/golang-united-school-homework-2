@@ -35,7 +35,3 @@ func CalcSquare(sideLen float64, sidesNum CustomInt) float64 {
 	}
 	return res
 }
-
-func main() {
-
-}
