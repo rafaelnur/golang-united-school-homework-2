@@ -17,14 +17,16 @@ const Pi = 3.14
 // CalcSquare(10.0, SidesCircle)
 
 func CalcSquare(sideLen float64, sidesNum CustomInt) float64 {
+	var res float64
 	switch {
 	case sidesNum == 0:
-		return sideLen * sideLen * Pi
+		res = sideLen * sideLen * Pi
 	case sidesNum == 4:
-		return sideLen * sideLen
+		res = sideLen * sideLen
 	case sidesNum == 3:
-		return sideLen * sideLen * math.Sqrt(3) / 4
+		res = sideLen * sideLen * math.Sqrt(3) / 4
 	default:
 		return 0
 	}
+	return res
 }
