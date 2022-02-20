@@ -1,4 +1,4 @@
-package solution
+package main
 
 import (
 	"math"
@@ -7,10 +7,10 @@ import (
 type CustomInt int
 
 const (
-	Pi            = 3.14
-	SidesTriangle = 3
-	SidesCircle   = 0
-	SidesSquare   = 4
+	Pi                      = 3.14
+	SidesTriangle CustomInt = 3
+	SidesCircle   CustomInt = 0
+	SidesSquare   CustomInt = 4
 )
 
 // Define custom int type to hold sides number and update CalcSquare signature by replacing #yourTypeNameHere#
@@ -25,9 +25,9 @@ func CalcSquare(sideLen float64, sidesNum CustomInt) float64 {
 	var res float64
 	switch {
 	case sidesNum == SidesCircle:
-		res = math.Pow(2, sideLen) * Pi
+		res = math.Pow(sideLen, 2) * Pi
 	case sidesNum == SidesSquare:
-		res = math.Pow(2, sideLen)
+		res = math.Pow(sideLen, 2)
 	case sidesNum == SidesTriangle:
 		res = math.Pow(2, sideLen) * math.Sqrt(3) / 4
 	default:
