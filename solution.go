@@ -6,7 +6,12 @@ import (
 
 type CustomInt int
 
-const Pi = 3.14
+const (
+	Pi            = 3.14
+	SidesTriangle = 3
+	SidesCircle   = 0
+	SidesSquare   = 4
+)
 
 // Define custom int type to hold sides number and update CalcSquare signature by replacing #yourTypeNameHere#
 
@@ -19,14 +24,18 @@ const Pi = 3.14
 func CalcSquare(sideLen float64, sidesNum CustomInt) float64 {
 	var res float64
 	switch {
-	case sidesNum == 0:
+	case sidesNum == SidesCircle:
 		res = math.Pow(2, sideLen) * Pi
-	case sidesNum == 4:
+	case sidesNum == SidesSquare:
 		res = math.Pow(2, sideLen)
-	case sidesNum == 3:
+	case sidesNum == SidesTriangle:
 		res = math.Pow(2, sideLen) * math.Sqrt(3) / 4
 	default:
 		return 0
 	}
 	return res
+}
+
+func main() {
+
 }
