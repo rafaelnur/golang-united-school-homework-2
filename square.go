@@ -4,14 +4,14 @@ import (
 	"math"
 )
 
-type CustomInt int
-
 const (
 	Pi                      = 3.14
 	SidesTriangle CustomInt = 3
 	SidesCircle   CustomInt = 0
 	SidesSquare   CustomInt = 4
 )
+
+type CustomInt int
 
 // Define custom int type to hold sides number and update CalcSquare signature by replacing #yourTypeNameHere#
 
