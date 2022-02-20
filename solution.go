@@ -29,7 +29,7 @@ func CalcSquare(sideLen float64, sidesNum CustomInt) float64 {
 	case sidesNum == SidesSquare:
 		res = math.Pow(sideLen, 2)
 	case sidesNum == SidesTriangle:
-		res = math.Pow(sideLen, 2) * math.Sqrt(3) / 4
+		res = math.Pow(sideLen, 2) * (math.Sqrt(3) / 4)
 	default:
 		return 0
 	}
